@@ -28,6 +28,17 @@ group :development do
   gem "puppet-module-posix-dev-r#{minor_version}", '~> 0.4',     require: false, platforms: [:ruby]
   gem "puppet-module-win-default-r#{minor_version}", '~> 0.4',   require: false, platforms: [:mswin, :mingw, :x64_mingw]
   gem "puppet-module-win-dev-r#{minor_version}", '~> 0.4',       require: false, platforms: [:mswin, :mingw, :x64_mingw]
+
+  # Module-specific gems
+  gem "coveralls",                                                  require: false
+  gem "fakefs",                                                     require: false
+  gem "puppet-lint-classes_and_types_beginning_with_digits-check",  require: false
+  gem "puppet-lint-leading_zero-check",                             require: false
+  gem "puppet-lint-trailing_comma-check",                           require: false
+  gem "puppet-lint-unquoted_string-check",                          require: false
+  gem "puppet-lint-variable_contains_upcase",                       require: false
+  gem "puppet-lint-version_comparison-check",                       require: false
+  gem "rspec-json_expectations",                                    require: false
 end
 
 puppet_version = ENV['PUPPET_GEM_VERSION']
